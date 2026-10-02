@@ -1,3 +1,36 @@
+# Comment compiler et exécuter les programmes
+
+Le projet utilise un `Makefile` placé à la racine (`TP_Socle/`). Chaque exercice a son dossier (`exo0/`, `exo2/`, …) et son exécutable.
+
+### Tout compiler
+
+Depuis la racine `TP_Socle/` :
+
+```powershell
+make
+```
+
+### Compiler un seul exercice
+
+```powershell
+make exo5/main
+```
+
+### Exécuter
+
+Sous PowerShell, préfixer par `.\` :
+
+```powershell
+.\exo5\main.exe
+```
+
+Pour l'exercice 0, l'exécutable s'appelle `test` :
+
+```powershell
+.\exo0\test.exe
+```
+
+
 # Exercice 0 : Annuaire
 
 ## Question 4
