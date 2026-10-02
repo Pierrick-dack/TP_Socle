@@ -46,6 +46,13 @@ void seq_insert(const char *email, int id)
     printf("taille = %d, capacite = %d\n", taille, capacite);
 }
 
+bool seq_search(const char *email) {
+    for (int i = 0; i < taille; i++)
+        if (strcmp(annuaire[i].email, email) == 0)
+            return true;
+    return false;
+}
+
 void seq_free(void)
 {
     free(annuaire);
