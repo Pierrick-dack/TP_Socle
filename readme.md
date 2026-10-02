@@ -25,31 +25,25 @@ Exercice 1 : Analyser le problème avant de coder
 
 | Point       | Réponse appliquée au problème                                                                                   |
 |-------------|----------------------------------------------------------------------------------------------------------------|
-| Entrées     | Une adresse e-mail (chaîne) fournie à l'inscription, à comparer aux e-mails déjà enregistrés.                   |
+| Entrées     | Une adresse e-mail fournie à l'inscription, à comparer aux e-mails déjà enregistrés.                   |
 | Sorties     | Un booléen : l'e-mail existe déjà (inscription refusée) ou non (compte créé).                                   |
-| Contraintes | La vérification doit être rapide et exacte : aucun doublon ne doit passer, sans bloquer l'inscription.          |
+| Contraintes | La vérification doit être rapide : aucun doublon ne doit passer, sans bloquer l'inscription.          |
 | Volume      | Le nombre de comptes enregistrés, qui ne fait que croître (chaque inscription réussie ajoute un e-mail).        |
-| Fréquence   | La vérification est appelée à chaque tentative d'inscription, donc potentiellement très souvent.               |
+| Fréquence   | La vérification est appelée à chaque tentative d'inscription.               |
 
 ### Question 2 — Quels points guident le choix de la structure de données ?
 
-Les points utiles sont le **Volume** et la **Fréquence** (et secondairement les
-**Contraintes** de temps/mémoire). C'est le nombre d'éléments à stocker et le
+Les points utiles sont le **Volume** et la **Fréquence**. C'est le nombre d'éléments à stocker et le
 nombre de recherches par seconde qui décident si une recherche séquentielle en
 O(n) suffit ou s'il faut une table de hachage.
-
-Les **Entrées** et les **Sorties** n'apprennent rien sur ce choix : elles sont
-identiques quelle que soit la structure retenue (on compare toujours une chaîne,
-on renvoie toujours un booléen). Elles définissent *ce que* le programme fait,
-pas *comment* l'organiser efficacement.
 
 ### Question 3 — Qu'est-ce qui distingue les deux annuaires ?
 
 Les deux points qui les séparent sont le **Volume** et la **Fréquence**.
 Les deux annuaires ont les mêmes entrées, la même sortie et les mêmes contraintes
-de correction ; seule l'échelle change : 30 éléments contre 5 millions (Volume),
-et deux consultations par jour contre mille par seconde (Fréquence). Ce sont
-précisément ces deux points qui justifient, pour le second, d'abandonner la
-recherche séquentielle au profit d'une table de hachage.
+de correction ; seule l'échelle change : 30 éléments contre 5 million, et deux consultations par jour contre mille par seconde (Fréquence).
 
+
+Exercice 2 : Un tableau qui grandit tout seul
 =====================
+

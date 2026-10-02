@@ -1,9 +1,13 @@
-CFLAGS = -Wall -Wextra
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11 -g -Iexo0
 
-all: exercice_0
+all: exo0/test exo2/main
 
-run: exercice_0
-	./exercice_0
+exo0/test: exo0/test.c exo0/annuaire.h
+	$(CC) $(CFLAGS) -o exo0/test exo0/test.c
+
+exo2/main: exo2/main.c exo2/sequentiel.c exo0/annuaire.h
+	$(CC) $(CFLAGS) -o exo2/main exo2/main.c exo2/sequentiel.c
 
 clean:
-	-del /f /q exercice_0.exe exercice_0 2>nul
+	rm -f exo0/*.o exo0/test exo0/test.exe exo2/*.o exo2/main exo2/main.exe
