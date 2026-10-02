@@ -3,6 +3,13 @@
 
 #include <stdbool.h>
 #define EMAIL_MAX 100
+#define TAILLE_TABLE 1024
+
+unsigned long hachage(const char *email);
+
+void hash_insert(const char *email, int id);
+bool hash_search(const char *email);
+void hash_free(void);
 
 typedef struct {
 	char email[EMAIL_MAX]; /* l'adresse e-mail */

@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11 -g -Iexo0
 
-all: exo0/test exo2/main exo3/main
+all: exo0/test exo2/main exo3/main exo4/main exo5/main
 
 exo0/test: exo0/test.c exo0/annuaire.h
 	$(CC) $(CFLAGS) -o exo0/test exo0/test.c
@@ -12,5 +12,11 @@ exo2/main: exo2/main.c exo2/sequentiel.c exo0/annuaire.h
 exo3/main: exo3/main.c exo2/sequentiel.c exo0/annuaire.h
 	$(CC) $(CFLAGS) -o exo3/main exo3/main.c exo2/sequentiel.c
 
+exo4/main: exo4/main.c exo4/hachage.c exo0/annuaire.h
+	$(CC) $(CFLAGS) -o exo4/main exo4/main.c exo4/hachage.c
+
+exo5/main: exo5/main.c exo5/hash.c exo4/hachage.c exo0/annuaire.h
+	$(CC) $(CFLAGS) -o exo5/main exo5/main.c exo5/hash.c exo4/hachage.c
+
 clean:
-	rm -f exo0/*.o exo0/test exo0/test.exe exo2/*.o exo2/main exo2/main.exe exo3/*.o exo3/main exo3/main.exe 
+	rm -f exo0/*.o exo0/test exo0/test.exe exo2/*.o exo2/main exo2/main.exe exo3/*.o exo3/main exo3/main.exe exo4/*.o exo4/main exo4/main.exe exo5/*.o exo5/main exo5/main.exe
