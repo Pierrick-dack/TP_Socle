@@ -1,7 +1,7 @@
 Exercice 0 : Annuaire
 =====================
 
-## Question 4
+### Question 4
 
 En remplaçant `snprintf` par `u.email = "alice@mail.com"`, j'ai l'erreur suivante :
 
@@ -14,14 +14,14 @@ test.c:10:13: error: assignment to expression with array type
 PS E:\Efrei\Master2\Algo_comparative\TP_Socle\exo0>
 ```
 
-## Question 5
+### Question 5
 Un tableau ne peut pas être affecté après sa déclaration
 
 =====================
 Exercice 1 : Analyser le problème avant de coder
 =====================
 
-## Question 1 : La grille d'analyse
+### Question 1 : La grille d'analyse
 
 | Point       | Réponse appliquée au problème                                                                                   |
 |-------------|----------------------------------------------------------------------------------------------------------------|
@@ -31,7 +31,7 @@ Exercice 1 : Analyser le problème avant de coder
 | Volume      | Le nombre de comptes enregistrés, qui ne fait que croître (chaque inscription réussie ajoute un e-mail).        |
 | Fréquence   | La vérification est appelée à chaque tentative d'inscription, donc potentiellement très souvent.               |
 
-## Question 2 — Quels points guident le choix de la structure de données ?
+### Question 2 — Quels points guident le choix de la structure de données ?
 
 Les points utiles sont le **Volume** et la **Fréquence** (et secondairement les
 **Contraintes** de temps/mémoire). C'est le nombre d'éléments à stocker et le
@@ -43,7 +43,7 @@ identiques quelle que soit la structure retenue (on compare toujours une chaîne
 on renvoie toujours un booléen). Elles définissent *ce que* le programme fait,
 pas *comment* l'organiser efficacement.
 
-## Question 3 — Qu'est-ce qui distingue les deux annuaires ?
+### Question 3 — Qu'est-ce qui distingue les deux annuaires ?
 
 Les deux points qui les séparent sont le **Volume** et la **Fréquence**.
 Les deux annuaires ont les mêmes entrées, la même sortie et les mêmes contraintes
