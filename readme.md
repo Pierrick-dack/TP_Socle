@@ -17,7 +17,6 @@ PS E:\Efrei\Master2\Algo_comparative\TP_Socle\exo0>
 ## Question 5
 Un tableau ne peut pas être affecté après sa déclaration
 
-=====================
 Exercice 1 : Analyser le problème avant de coder
 =====================
 
